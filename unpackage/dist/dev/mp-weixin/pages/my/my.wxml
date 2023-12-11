@@ -1,0 +1,1 @@
+<view class="video data-v-2f1ef635"><button class="data-v-2f1ef635" bindtap="{{a}}">拍摄视频</button><view class=" data-v-2f1ef635">{{b}}</view></view>

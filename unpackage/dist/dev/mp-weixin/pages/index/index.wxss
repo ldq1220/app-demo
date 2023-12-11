@@ -1,0 +1,97 @@
+/* 水平间距 */
+/* 水平间距 */
+.activite {
+  color: #04c9c3;
+}
+.content {
+  margin-top: 50px;
+  height: 90vh;
+  background-color: #04C9C3;
+  color: #fff;
+}
+.scroll-view_H {
+  position: fixed;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  width: 100%;
+  color: #CCCCCC;
+}
+.scroll-view-item_H {
+  display: inline-block;
+  width: 20%;
+  height: 10vh;
+  line-height: 10vh;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 32rpx;
+}
+
+/*******             ****/
+.video-layer {
+  position: absolute;
+  right: 12px;
+  bottom: 120px;
+  color: #fff;
+}
+.video-bottom-area {
+  position: absolute;
+  left: 20px;
+  bottom: 40px;
+  z-index: 999;
+}
+.video-bottom-area .shop-name {
+  color: #fff;
+  margin-bottom: 6px;
+}
+.video-bottom-area .shop-card {
+  width: 160px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+.video-side-right {
+  position: absolute;
+  right: 12px;
+  bottom: 120px;
+  color: #fff;
+  z-index: 999;
+}
+.video-side-right .action-item {
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.video-side-right .action-item .shop-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.video-side-right .action-item .iconfont {
+  display: block;
+  font-size: 28px;
+}
+.video-side-right .action-item .action-item-text {
+  display: block;
+  font-size: 12px;
+}
+.video-side-right .action-item .action-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f60;
+}
+.video-side-right .action-item .action-btn .iconfont {
+  font-size: 16px;
+}
+.video-side-right .action-item-user {
+  margin-bottom: 40px;
+}

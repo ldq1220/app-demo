@@ -1,0 +1,76 @@
+/* 水平间距 */
+/* 水平间距 */
+@font-face {
+  font-family: "m-tiktok-play-icon";
+  src: url(data:font/woff2;charset=utf-8;base64,d09GMgABAAAAAAJ0AA0AAAAABlgAAAIiAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0ZGVE0cGh4GYACCQhEICkhaCwoAATYCJAMQBCAFhQIHLxt4BcieBXbLR4jiyygbC491Mg0vz9JsPPz/ft/2ufeMmCQP9fXfRhxvMKHjkcSsTkqWplJJqpFFfn79mr4NG5fvwujI+EPeZCbudGJcy6oVklRVp8IAdgMJUqD853ceuhm3iSafWxNoC0bbskAmUGABTlrDAgwsC+xJ3/SJf3DecLgpCpyFgDcXlRJ8uiufSVcHBjENilBVIVGQKS50UZ6U1+ApeD7+6kcvRVcl2fZub1Q8/BfJG9VHbUp9J0UAYBWhomIRgUZWYFHOKkgp+FFsyVvmRkB0E4AooAg/DwF/49FSQIJeBMbBDIAEQIzfDW+OPVHX48vXUy26fUwfJnN0+tW5bLx3+dz5fHT61rQEIBDc77r579ZI8793IDWgftfb8/q83gC9Cggqvex6gvqcDoBMGojkOvpX4wgU9OtHC2DcOwgwoYpA6LWDQNHjDgJVr8cCpF7PBOgy4JUA3Xq9BYF+29EgMGAiLlSRfVgDlgyjlmQx7JSsRgVQYkeyy7RLstuoF7Lfid+qAWtxbiWmkbDEVgmyA2hRBHx6jOEomxtSuCEvAg5k/U4c0Bh2XJIYfiwLaz88BE9oYgkrKPS0dWGtk7/X7rqFOsU+TZzFM4k9Qx9jOkEXC3iErR+f0LhcASEUC9g0CtaGY3Jrsjf6zPrqiLsTyi1RpN9z3wPOMRaa6+jQAzbblCgVWLpySeZmOVzvLw8uOfSjoLSEEiV7Yg==) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.m-tiktok-video-iconfont {
+  font-family: m-tiktok-play-icon;
+}
+.m-tiktok-video-swiper,
+.m-tiktok-video-player {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+.m-tiktok-video-swiper .swiper-item {
+  position: relative;
+}
+.m-tiktok-video-swiper .m-tiktok-video-poster {
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.m-tiktok-video-swiper .m-tiktok-video-play-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.m-tiktok-video-swiper .m-tiktok-video-play-btn .video-icon {
+  font-size: 50px;
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+}
+.m-tiktok-video-swiper .m-tiktok-video-play-btn .video-icon.active {
+  opacity: 1;
+}
+
+.swiper {
+		width: 23.4375rem;
+		/* height: 500vh; */
+}
+.swiper-item {
+		width: 23.4375rem;
+		/* height: 500vh; */
+		z-index: 9;
+}
+.swiper-img {
+		width: 100vw;
+		height: 100vh;
+}
+
+	/* 	.left-box {
+		z-index: 20;
+		position: absolute;
+		bottom: 50px;
+		left: 10px;
+	}
+	.right-box {
+		z-index: 20;
+		position: absolute;
+		bottom: 50px;
+		right: 10px;
+	} */

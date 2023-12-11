@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "components/videoSwiper/videoSwiper",
+    "pages/video/video"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "backgroundColor": "black",
+    "borderStyle": "black",
+    "color": "#BFC9CA",
+    "selectedColor": "white",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/my"
+      },
+      {
+        "text": "推荐视频",
+        "pagePath": "pages/video/video"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

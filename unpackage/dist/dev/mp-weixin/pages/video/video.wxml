@@ -1,0 +1,1 @@
+<swiper class="swiper" style="{{'height:' + c}}" vertical="{{true}}" bindchange="{{d}}" bindtouchstart="{{e}}" bindtouchend="{{f}}"><swiper-item wx:for="{{a}}" wx:for-item="item" wx:key="b" style="{{'height:' + b}}" class="swiper-item"><video src="{{item.a}}" autoplay="{{true}}" style="width:100%;height:100vh"></video></swiper-item></swiper>

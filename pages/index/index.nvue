@@ -1,0 +1,304 @@
+<template>
+	<!-- <view class="container">
+		<videoSwiper ref="mTikTokRef" :video-list="state.videoList" @loadMore="loadMore" @change="change">
+			<template v-slot="data">
+				<view class="video-side-right">
+					<view class="action-item action-item-user">
+						<image class="shop-logo"
+							src="https://examples-1251000004.cos.ap-shanghai.myqcloud.com/sample.jpeg?imageMogr2/crop/180x180/gravity/center" />
+						<view class="action-btn">
+							<text class="iconfont">+</text>
+						</view>
+						<text class="action-item-text"></text>
+					</view>
+					<view class="action-item">
+						<text class="iconfont icon-star11beifen">❤</text>
+						<text class="action-item-text">{{ data.item.id }}</text>
+					</view>
+					<view class="action-item">
+						<text class="iconfont icon-share">☝</text>
+						<text class="action-item-text">分享</text>
+					</view>
+				</view>
+				<view class="video-bottom-area">
+					<view class="shop-name"> @{{ data.item.name }} </view>
+					<view class="shop-card">{{ data.item.desc }}</view>
+				</view>
+			</template>
+		</videoSwiper>
+	</view> -->
+
+	<view>
+		<!--顶部导航栏-->
+		<scroll-view class="scroll-view_H" scroll-x="true" @scroll="scroll">
+			<text class="scroll-view-item_H" v-for="(tab,index) in tabBars" :key="tab.id" :id="tab.id"
+				:class="navIndex == index ? 'activite' : ''" @tap="checkIndex(index)">
+				{{tab.name}}
+			</text>
+
+		</scroll-view>
+
+		<!-- 内容 -->
+		<swiper :current="navIndex" @change="tabChange" class="content">
+			<swiper-item class="swiper_item ">
+				同城
+			</swiper-item>
+			<swiper-item class="swiper_item ">
+				商店
+			</swiper-item>
+			<swiper-item class="swiper_item ">
+				关注
+			</swiper-item>
+			<swiper-item class="swiper_item ">
+				<videoSwiper ref="mTikTokRef" :video-list="state.videoList" @loadMore="loadMore" @change="change">
+					<template v-slot="data">
+						<view class="video-side-right">
+							<view class="action-item action-item-user">
+								<image class="shop-logo"
+									src="https://examples-1251000004.cos.ap-shanghai.myqcloud.com/sample.jpeg?imageMogr2/crop/180x180/gravity/center" />
+								<view class="action-btn">
+									<text class="iconfont">+</text>
+								</view>
+								<text class="action-item-text"></text>
+							</view>
+							<view class="action-item">
+								<text class="iconfont icon-star11beifen">❤</text>
+								<text class="action-item-text">{{ data.item.id }}</text>
+							</view>
+							<view class="action-item">
+								<text class="iconfont icon-share">☝</text>
+								<text class="action-item-text">分享</text>
+							</view>
+						</view>
+						<view class="video-bottom-area">
+							<view class="shop-name"> @{{ data.item.name }} </view>
+							<view class="shop-card">{{ data.item.desc }}</view>
+						</view>
+					</template>
+				</videoSwiper>
+			</swiper-item>
+			<swiper-item class="swiper_item ">
+				主页详情信息
+			</swiper-item>
+		</swiper>
+
+	</view>
+</template>
+
+<script setup>
+	import {
+		onMounted,
+		reactive,
+		ref
+	} from "vue";
+
+	import videoSwiper from '../../components/videoSwiper/videoSwiper.nvue'
+
+	/*************  tab  **********************/
+	const scrollTop = ref(0)
+	const navIndex = ref(3)
+	const tabBars = ref([{
+		name: '同城',
+		id: 'equipment'
+	}, {
+		name: '商店',
+		id: 'expert'
+	}, {
+		name: '关注',
+		id: 'fault'
+	}, {
+		name: '推荐视频',
+		id: 'defect'
+	}, ])
+
+	const checkIndex = (index) => {
+		navIndex.value = index
+	}
+	const tabChange = (e) => {
+		navIndex.value = e.detail.current
+	}
+
+
+
+	const mTikTokRef = ref();
+
+	const state = reactive({
+		videoList: [{
+				src: "https://xjc.demo.hongcd.com/uploads/20230214/84e165388f5bfdb1550522f50f5a57bb.mp4",
+				id: "1",
+				name: "开玩笑的鸡毛",
+				desc: "这里是简介内容",
+			},
+			{
+				src: "https://xjc.demo.hongcd.com/uploads/20230214/3f26d950ac286eecedba49f5295f0819.mp4",
+				id: "2",
+				name: "开玩笑的鸡毛",
+				desc: "这里是简介内容",
+			},
+			{
+				src: "https://xjc.demo.hongcd.com/uploads/20230215/8b5ac0420fe61e2f9660d7b8af998f7b.mp4",
+				id: "3",
+				name: "开玩笑的鸡毛",
+				desc: "这里是简介内容",
+			},
+			{
+				src: "https://xjc.demo.hongcd.com/uploads/20210128/d932b2d78cebb0a8cb8f9a6216790dfb.mp4",
+				id: "4",
+				name: "开玩笑的鸡毛",
+				desc: "这里是简介内容",
+			},
+			{
+				src: "https://xjc.demo.hongcd.com/uploads/20210128/0c64cbeea28b10c06eee8728c762449e.mp4",
+				id: "5",
+				name: "开玩笑的鸡毛",
+				desc: "这里是简介内容",
+			},
+			{
+				src: "https://xjc.demo.hongcd.com/uploads/20210327/1b72e1b6153cd29df07f5449991e8083.mp4",
+				id: "6",
+				name: "开玩笑的鸡毛",
+				desc: "这里是简介内容",
+			},
+			{
+				src: "https://xjc.demo.hongcd.com/uploads/20230214/7e1a0baaebc4e656bbbfbc44d7a55a60.mp4",
+				id: "7",
+				name: "开玩笑的鸡毛",
+				desc: "这里是简介内容",
+			},
+		],
+	});
+
+	const loadMore = () => {
+		// 触发加载更多
+		console.log("加载更多");
+	};
+
+	const change = (e) => {
+		console.log("🚀 ~ file: index.vue:53 ~ change ~ data:", e);
+	};
+
+	// 播放第几个
+	const playIndex = (index) => {
+		mTikTokRef.value?.initSwiperData(index);
+	};
+
+	onMounted(() => {
+		// 直接播放第3个
+		// playIndex(3);
+	});
+</script>
+
+<style lang="scss">
+	.activite {
+		color: #04c9c3;
+	}
+
+	.content {
+		margin-top: 100rpx;
+		// height: calc(100vh - 10vh);
+		height: 1000rpx;
+		background-color: #ff7500;
+		color: #fff;
+	}
+
+	.scroll-view_H {
+		position: fixed;
+		top: 0;
+		left: 0;
+		white-space: nowrap;
+		width: 750rpx;
+		color: #CCCCCC;
+		display: flex;
+	}
+
+	.scroll-view-item_H {
+		// display: inline;
+		// width: 300rpx;
+		// // height: 100rpx;
+		// line-height: 50rpx;
+		// // text-align: center;
+		// padding: 20rpx 0;
+		// font-size: 32rpx;
+		// background-color: red;
+	}
+
+	/*******             ****/
+	.video-layer {
+		position: absolute;
+		right: 24rpx;
+		bottom: 240rpx;
+		color: #fff;
+	}
+
+	.video-bottom-area {
+		position: absolute;
+		left: 40rpx;
+		bottom: 80rpx;
+		z-index: 999;
+
+		.shop-name {
+			color: #fff;
+			margin-bottom: 6px;
+		}
+
+		.shop-card {
+			width: 160px;
+			height: 80px;
+			background-color: rgba(255, 255, 255, 0.5);
+			border-radius: 4px;
+		}
+	}
+
+	.video-side-right {
+		position: absolute;
+		right: 12px;
+		bottom: 120px;
+		color: #fff;
+		z-index: 999;
+
+		.action-item {
+			position: relative;
+			margin-bottom: 20px;
+			text-align: center;
+
+			.shop-logo {
+				width: 40px;
+				height: 40px;
+				border-radius: 40px;
+				overflow: hidden;
+			}
+
+			.iconfont {
+				display: block;
+				font-size: 28px;
+			}
+
+			.action-item-text {
+				display: block;
+				font-size: 12px;
+			}
+
+			.action-btn {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: -8px;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #f60;
+
+				.iconfont {
+					font-size: 16px;
+				}
+			}
+		}
+
+		.action-item-user {
+			margin-bottom: 40px;
+		}
+	}
+</style>

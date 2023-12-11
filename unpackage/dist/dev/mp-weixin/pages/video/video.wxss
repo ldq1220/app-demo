@@ -1,0 +1,27 @@
+
+.swiper {
+		width: 750rpx;
+		/* height: 500vh; */
+}
+.swiper-item {
+		width: 750rpx;
+		/* height: 500vh; */
+		z-index: 9;
+}
+.swiper-img {
+		width: 100vw;
+		height: 100vh;
+}
+
+	/* 	.left-box {
+		z-index: 20;
+		position: absolute;
+		bottom: 50px;
+		left: 10px;
+	}
+	.right-box {
+		z-index: 20;
+		position: absolute;
+		bottom: 50px;
+		right: 10px;
+	} */
